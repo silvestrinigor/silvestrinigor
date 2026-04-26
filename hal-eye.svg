@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <radialGradient id="lensGrad" cx="42%" cy="38%" r="58%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ff6633"/>
+      <stop offset="35%" stop-color="#cc2200"/>
+      <stop offset="100%" stop-color="#330000"/>
+    </radialGradient>
+    <radialGradient id="glintGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#cc0000" stop-opacity="0.18"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient red glow around housing -->
+  <circle cx="90" cy="90" r="89" fill="url(#ambientGlow)"/>
+
+  <!-- Outer housing -->
+  <circle cx="90" cy="90" r="84" fill="#080808"/>
+
+  <!-- Concentric housing rings -->
+  <circle cx="90" cy="90" r="81" fill="none" stroke="#1c1c1c" stroke-width="3"/>
+  <circle cx="90" cy="90" r="75" fill="none" stroke="#141414" stroke-width="2"/>
+  <circle cx="90" cy="90" r="69" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Warm glow behind lens -->
+  <circle cx="90" cy="90" r="57" fill="#0f0000" filter="url(#softBlur)"/>
+
+  <!-- Main lens -->
+  <circle cx="90" cy="90" r="53" fill="url(#lensGrad)"/>
+
+  <!-- Lens rim -->
+  <circle cx="90" cy="90" r="53" fill="none" stroke="#ff2200" stroke-width="1.2" stroke-opacity="0.45"/>
+
+  <!-- Inner pupil shadow -->
+  <circle cx="90" cy="90" r="23" fill="#150000"/>
+  <circle cx="90" cy="90" r="19" fill="#0a0000"/>
+
+  <!-- Specular highlight / glint -->
+  <ellipse cx="70" cy="69" rx="11" ry="7.5" fill="url(#glintGrad)" transform="rotate(-22 70 69)"/>
+
+  <!-- Mounting screws -->
+  <circle cx="90" cy="7"   r="3" fill="#0c0c0c" stroke="#252525" stroke-width="1"/>
+  <circle cx="90" cy="173" r="3" fill="#0c0c0c" stroke="#252525" stroke-width="1"/>
+  <circle cx="7"  cy="90"  r="3" fill="#0c0c0c" stroke="#252525" stroke-width="1"/>
+  <circle cx="173" cy="90" r="3" fill="#0c0c0c" stroke="#252525" stroke-width="1"/>
+
+  <!-- Tick marks at cardinal points -->
+  <line x1="90" y1="12"  x2="90" y2="20"  stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="90" y1="160" x2="90" y2="168" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="12" y1="90"  x2="20" y2="90"  stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="160" y1="90" x2="168" y2="90" stroke="#2a2a2a" stroke-width="1.5"/>
+</svg>
