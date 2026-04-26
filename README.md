@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hal-eye.svg" width="160" alt="HAL 9000" />
+<img src="./hal-eye.svg" width="400" alt="HAL 9000" />
 
 <br><br>
 
